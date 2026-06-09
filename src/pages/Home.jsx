@@ -1,6 +1,5 @@
 import { useNavigate } from 'react-router-dom'
 import CTABand from '../components/CTABand'
-import jimiPhoto from '../assets/jimi-trumpet.jpg'
 
 const TESTIMONIALS = [
   {
@@ -57,7 +56,7 @@ export default function Home() {
               </div>
             </div>
             <img
-              src={jimiPhoto}
+              src="/jimi-trumpet.jpg"
               alt="Jimi Michel playing the trumpet"
               style={{
                 aspectRatio: '4 / 5',

@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import deeringMap from '../assets/deering-map.png'
 
 const WEB3FORMS_KEY = import.meta.env.VITE_WEB3FORMS_KEY
 
@@ -93,7 +92,7 @@ export default function Contact() {
                 style={{ display: 'block', marginTop: 28, borderRadius: 'var(--radius)', overflow: 'hidden', border: '1px solid var(--line)' }}
               >
                 <img
-                  src={deeringMap}
+                  src="/deering-map.png"
                   alt="Map showing the Deering Center neighborhood of Portland, Maine"
                   style={{ display: 'block', width: '100%', height: 'auto' }}
                 />

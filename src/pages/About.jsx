@@ -1,5 +1,3 @@
-import jimiPhoto from '../assets/jimi-trumpet.jpg'
-
 const INSTRUMENTS = [
   { n: 'Bb Trumpet', d: 'The everyday workhorse for lessons and most repertoire.' },
   { n: 'Cornet', d: 'Warmer and rounder — lovely for brass band and lyrical playing.' },
@@ -47,7 +45,7 @@ export default function About() {
           <div className="eyebrow eyebrow-lg">About</div>
           <div className="bio-grid" style={{ marginTop: 28 }}>
             <img
-              src={jimiPhoto}
+              src="/jimi-trumpet.jpg"
               alt="Jimi Michel playing the trumpet"
               style={{
                 aspectRatio: '4 / 5',
