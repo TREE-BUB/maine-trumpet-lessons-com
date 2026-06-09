@@ -26,7 +26,10 @@ export default function Contact() {
               </p>
 
               <div style={{ marginTop: 36, display: 'flex', flexDirection: 'column', gap: 18 }}>
-                {[['Email', 'hello@mainetrumpetlessons.com'], ['Studio', 'Deering Center, Portland (ME)']].map(([k, v]) => (
+                {[
+                  ['Email', <a href="mailto:hello@mainetrumpetlessons.com?subject=I%27m%20interested%20in%20trumpet%20lessons!" style={{ color: 'var(--ink)', textDecoration: 'underline', textDecorationColor: 'var(--line)' }}>hello@mainetrumpetlessons.com</a>],
+                  ['Studio', 'Deering Center, Portland (ME)'],
+                ].map(([k, v]) => (
                   <div key={k} style={{ display: 'flex', gap: 14, alignItems: 'baseline' }}>
                     <span style={{ fontFamily: 'var(--mono)', fontSize: '0.68rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--muted)', width: 64, flexShrink: 0 }}>{k}</span>
                     <span style={{ fontSize: '1rem', color: 'var(--ink)' }}>{v}</span>
