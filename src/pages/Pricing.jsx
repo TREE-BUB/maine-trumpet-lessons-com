@@ -4,7 +4,6 @@ import CTABand from '../components/CTABand'
 
 const RATES = [
   ['30-minute lessons', '$40'],
-  ['45-minute lessons', '$55'],
   ['60-minute lessons', '$70'],
 ]
 
@@ -15,7 +14,7 @@ export default function Pricing() {
       <section className="section-sm" style={{ paddingTop: 72 }}>
         <div className="wrap" style={{ maxWidth: 820 }}>
           <div className="eyebrow eyebrow-lg">Pricing</div>
-          <h1 style={{ fontSize: 'clamp(2.3rem, 5vw, 3.8rem)', marginTop: 20 }}>2025–2026 rates.</h1>
+          <h1 style={{ fontSize: 'clamp(2.3rem, 5vw, 3.8rem)', marginTop: 20 }}>2026–2027 rates.</h1>
 
           <div style={{ marginTop: 40, borderTop: '1px solid var(--line)' }}>
             {RATES.map(([label, price]) => (

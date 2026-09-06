@@ -49,7 +49,7 @@ export const ROUTES = [
     priority: '0.8',
     title: 'Trumpet Lesson Rates | Portland ME | Maine Trumpet Lessons',
     description:
-      '2025-2026 trumpet lesson rates in Portland, Maine: 30 minutes $40, 45 minutes $55, 60 minutes $70. Prices are never raised on existing students.',
+      '2026-2027 trumpet lesson rates in Portland, Maine: 30 minutes $40, 60 minutes $70. Prices are never raised on existing students. Discounts available.',
   },
   {
     path: '/about',

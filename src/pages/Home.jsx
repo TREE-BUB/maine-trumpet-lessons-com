@@ -34,13 +34,6 @@ const JSON_LD = {
         },
         {
           '@type': 'Offer',
-          name: '45-minute trumpet lesson',
-          price: '55',
-          priceCurrency: 'USD',
-          category: 'Private trumpet lesson',
-        },
-        {
-          '@type': 'Offer',
           name: '60-minute trumpet lesson',
           price: '70',
           priceCurrency: 'USD',
