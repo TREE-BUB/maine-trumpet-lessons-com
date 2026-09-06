@@ -1,50 +1,36 @@
-import { useNavigate } from 'react-router-dom'
-
-const PAGES = [
-  { path: '/', label: 'Home' },
-  { path: '/lessons', label: 'Lessons' },
-  { path: '/policies', label: 'Policies' },
-  { path: '/pricing', label: 'Pricing' },
-  { path: '/about', label: 'About' },
-]
+import { Link } from 'react-router-dom'
+import { NAV_ROUTES } from '../routes'
 
 export default function Footer() {
-  const navigate = useNavigate()
-
-  const go = (path) => {
-    navigate(path)
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }
-
   return (
     <footer className="footer">
       <div className="wrap">
         <div className="footer-grid">
           <div className="footer-col">
-            <div
-              style={{ fontWeight: 800, fontSize: '1.1rem', letterSpacing: '0.015em', textTransform: 'uppercase', color: 'var(--paper)', cursor: 'pointer' }}
-              onClick={() => go('/')}
+            <Link
+              to="/"
+              style={{ fontWeight: 800, fontSize: '1.1rem', letterSpacing: '0.015em', textTransform: 'uppercase', color: 'var(--paper)', cursor: 'pointer', padding: 0 }}
             >
               Maine Trumpet Lessons
-            </div>
+            </Link>
             <p style={{ color: 'color-mix(in srgb, var(--paper) 70%, transparent)', marginTop: 18, maxWidth: 320, lineHeight: 1.6, fontSize: '0.95rem' }}>
               Private, in-person trumpet lessons for comeback players, beginners, intermediate, and advanced students of all ages, taught with patience in Deering Center.
             </p>
-            <button
+            <Link
+              to="/contact"
               className="btn btn-accent"
               style={{ marginTop: 22 }}
-              onClick={() => go('/contact')}
             >
               Get more info or schedule your first lesson
-            </button>
+            </Link>
           </div>
 
           <div className="footer-col">
             <h4>Explore</h4>
-            {PAGES.map((p) => (
-              <a key={p.path} onClick={() => go(p.path)}>{p.label}</a>
+            {NAV_ROUTES.map((p) => (
+              <Link key={p.path} to={p.path}>{p.label}</Link>
             ))}
-            <a onClick={() => go('/contact')}>Contact</a>
+            <Link to="/contact">Contact</Link>
           </div>
         </div>
 

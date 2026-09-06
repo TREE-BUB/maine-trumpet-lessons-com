@@ -1,39 +1,68 @@
-import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import CTABand from '../components/CTABand'
 import SEO from '../components/SEO'
+import { SITE_URL, OG_IMAGE } from '../routes'
 
 const JSON_LD = {
   '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  name: 'Maine Trumpet Lessons',
-  description: 'Private, in-person trumpet lessons for all ages and levels in Deering Center, Portland, Maine.',
-  url: 'https://mainetrumpetlessons.com',
-  image: 'https://mainetrumpetlessons.com/jimi-trumpet.jpg',
-  telephone: null,
-  email: 'hello@mainetrumpetlessons.com',
-  priceRange: '$40–$70',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Portland',
-    addressRegion: 'ME',
-    addressCountry: 'US',
-    neighborhood: 'Deering Center',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 43.6713,
-    longitude: -70.2965,
-  },
-  sameAs: [],
-  hasOfferCatalog: {
-    '@type': 'OfferCatalog',
-    name: 'Trumpet Lessons',
-    itemListElement: [
-      { '@type': 'Offer', name: '30-minute trumpet lesson', price: '40', priceCurrency: 'USD' },
-      { '@type': 'Offer', name: '45-minute trumpet lesson', price: '55', priceCurrency: 'USD' },
-      { '@type': 'Offer', name: '60-minute trumpet lesson', price: '70', priceCurrency: 'USD' },
-    ],
-  },
+  '@graph': [
+    {
+      '@type': ['LocalBusiness', 'MusicSchool'],
+      '@id': `${SITE_URL}/#business`,
+      name: 'Maine Trumpet Lessons',
+      description:
+        'Private, in-person trumpet lessons for beginners, comeback players, and advanced students of all ages in Deering Center, Portland, Maine.',
+      url: `${SITE_URL}/`,
+      image: OG_IMAGE,
+      email: 'hello@mainetrumpetlessons.com',
+      priceRange: '$$',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Portland',
+        addressRegion: 'ME',
+        addressCountry: 'US',
+      },
+      areaServed: 'Portland, Maine',
+      employee: { '@id': `${SITE_URL}/#jimi-michel` },
+      makesOffer: [
+        {
+          '@type': 'Offer',
+          name: '30-minute trumpet lesson',
+          price: '40',
+          priceCurrency: 'USD',
+          category: 'Private trumpet lesson',
+        },
+        {
+          '@type': 'Offer',
+          name: '45-minute trumpet lesson',
+          price: '55',
+          priceCurrency: 'USD',
+          category: 'Private trumpet lesson',
+        },
+        {
+          '@type': 'Offer',
+          name: '60-minute trumpet lesson',
+          price: '70',
+          priceCurrency: 'USD',
+          category: 'Private trumpet lesson',
+        },
+      ],
+    },
+    {
+      '@type': 'Person',
+      '@id': `${SITE_URL}/#jimi-michel`,
+      name: 'Jimi Michel',
+      jobTitle: 'Trumpet Instructor',
+      url: `${SITE_URL}/about`,
+      image: OG_IMAGE,
+      email: 'hello@mainetrumpetlessons.com',
+      worksFor: { '@id': `${SITE_URL}/#business` },
+      alumniOf: [
+        { '@type': 'EducationalOrganization', name: 'Interlochen Arts Academy' },
+        { '@type': 'EducationalOrganization', name: 'New England Conservatory' },
+      ],
+    },
+  ],
 }
 
 const TESTIMONIALS = [
@@ -65,16 +94,9 @@ const TESTIMONIALS = [
 ]
 
 export default function Home() {
-  const navigate = useNavigate()
-  const go = (path) => { navigate(path); window.scrollTo({ top: 0, behavior: 'smooth' }) }
-
   return (
     <div className="page">
-      <SEO
-        description="Private, in-person trumpet lessons for all ages and levels in Deering Center, Portland, Maine. Over two decades of teaching experience."
-        path="/"
-        jsonLd={JSON_LD}
-      />
+      <SEO path="/" jsonLd={JSON_LD} />
       {/* Hero */}
       <section style={{ padding: 'clamp(56px, 8vw, 104px) 0 72px' }}>
         <div className="wrap">
@@ -91,8 +113,8 @@ export default function Home() {
                 <span style={{ fontWeight: 600, color: 'var(--ink)' }}>– Jimi Michel</span>
               </p>
               <div style={{ display: 'flex', gap: 14, marginTop: 34, flexWrap: 'wrap' }}>
-                <button className="btn btn-accent btn-lg" onClick={() => go('/contact')}>Get in touch</button>
-                <button className="btn btn-ghost btn-lg" onClick={() => go('/pricing')}>See pricing</button>
+                <Link className="btn btn-accent btn-lg" to="/contact">Get in touch</Link>
+                <Link className="btn btn-ghost btn-lg" to="/pricing">See pricing</Link>
               </div>
             </div>
             <img

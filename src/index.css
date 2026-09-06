@@ -310,6 +310,11 @@ p { margin: 0; }
   font-weight: 400;
 }
 .footer-col a { display: block; padding: 5px 0; font-size: 0.95rem; cursor: pointer; }
+/* Footer CTA is an <a> for crawlability; keep it looking like a button.
+   `.footer a` and `.footer-col a` are more specific than `.btn`, so the
+   button's own layout and text colour have to be restored here. */
+.footer-col a.btn { display: inline-flex; padding: 13px 26px; font-size: 0.95rem; }
+.footer a.btn-accent { color: #fff; }
 .footer-bottom {
   display: flex;
   align-items: center;

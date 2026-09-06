@@ -29,7 +29,7 @@ function PolicyList({ items }) {
 export default function Policies() {
   return (
     <div className="page">
-      <SEO title="Studio Policies" description="Studio policies for Maine Trumpet Lessons — practice expectations, required materials, billing, attendance, and what to expect from private trumpet lessons in Portland, ME." path="/policies" />
+      <SEO path="/policies" />
       <section className="section-sm" style={{ paddingTop: 72 }}>
         <div className="wrap" style={{ maxWidth: 800 }}>
           <div className="eyebrow eyebrow-lg">Studio policies</div>

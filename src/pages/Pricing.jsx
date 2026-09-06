@@ -1,5 +1,5 @@
 import SEO from '../components/SEO'
-import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import CTABand from '../components/CTABand'
 
 const RATES = [
@@ -9,12 +9,9 @@ const RATES = [
 ]
 
 export default function Pricing() {
-  const navigate = useNavigate()
-  const go = (path) => { navigate(path); window.scrollTo({ top: 0, behavior: 'smooth' }) }
-
   return (
     <div className="page">
-      <SEO title="Pricing" description="Trumpet lesson rates in Portland, Maine: 30-minute lessons $40, 45-minute $55, 60-minute $70. Need-based discounts available. Prices never raised on existing students." path="/pricing" />
+      <SEO path="/pricing" />
       <section className="section-sm" style={{ paddingTop: 72 }}>
         <div className="wrap" style={{ maxWidth: 820 }}>
           <div className="eyebrow eyebrow-lg">Pricing</div>
@@ -58,7 +55,7 @@ export default function Pricing() {
             <p style={{ maxWidth: 520, lineHeight: 1.6, color: 'var(--ink)', fontSize: '1.02rem' }}>
               Price shouldn't be a barrier to learning about music. If you or your child would like lessons but are worried about the cost, please reach out. In most cases, I am able to offer need-based discounts.
             </p>
-            <button className="btn btn-accent btn-lg" onClick={() => go('/contact')}>Get in touch</button>
+            <Link className="btn btn-accent btn-lg" to="/contact">Get in touch</Link>
           </div>
         </div>
       </section>

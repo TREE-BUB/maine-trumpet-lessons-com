@@ -1,9 +1,6 @@
-import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 export default function CTABand() {
-  const navigate = useNavigate()
-  const go = (path) => { navigate(path); window.scrollTo({ top: 0, behavior: 'smooth' }) }
-
   return (
     <section className="section">
       <div className="wrap">
@@ -28,9 +25,9 @@ export default function CTABand() {
               Lessons here are low-pressure — no auditions to pass, no judgment, no rush. Whether you're starting fresh or picking it back up, I'm just here to help you enjoy playing and get a little better each week.
             </p>
           </div>
-          <button className="btn btn-accent btn-lg" onClick={() => go('/contact')}>
+          <Link className="btn btn-accent btn-lg" to="/contact">
             Reach out to get started
-          </button>
+          </Link>
         </div>
       </div>
     </section>

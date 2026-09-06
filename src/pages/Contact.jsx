@@ -11,7 +11,7 @@ export default function Contact() {
 
   return (
     <div className="page">
-      <SEO title="Contact" description="Get in touch to schedule private trumpet lessons in Deering Center, Portland, Maine. Reach out via the contact form or email hello@mainetrumpetlessons.com." path="/contact" />
+      <SEO path="/contact" />
       <section className="section-sm" style={{ paddingTop: 72, paddingBottom: 90 }}>
         <div className="wrap">
           <div className="contact-grid">

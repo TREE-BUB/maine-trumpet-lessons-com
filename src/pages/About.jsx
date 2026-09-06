@@ -40,7 +40,7 @@ function InstrumentIcon() {
 export default function About() {
   return (
     <div className="page">
-      <SEO title="About Jimi Michel" description="Jimi Michel is a Maine-based trumpeter, educator, and musicologist. Former Principal Trumpet of the New York String Orchestra. Degrees from Interlochen Arts Academy and New England Conservatory." path="/about" />
+      <SEO path="/about" />
       {/* Bio */}
       <section className="section-sm" style={{ paddingTop: 72 }}>
         <div className="wrap">

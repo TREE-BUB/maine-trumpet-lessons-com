@@ -22,7 +22,7 @@ const PILLARS = [
 export default function Lessons() {
   return (
     <div className="page">
-      <SEO title="Lessons" description="Learn about Jimi Michel's trumpet teaching philosophy — technique, musicianship, and critical thinking for students of all ages in Portland, Maine." path="/lessons" />
+      <SEO path="/lessons" />
       <section className="section-sm" style={{ paddingTop: 72 }}>
         <div className="wrap" style={{ maxWidth: 880 }}>
           <div className="eyebrow eyebrow-lg">LESSONS</div>
