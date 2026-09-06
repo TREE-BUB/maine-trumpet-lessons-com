@@ -1,11 +1,12 @@
 import SEO from '../components/SEO'
+import CTABand from '../components/CTABand'
 
 export default function About() {
   return (
     <div className="page">
       <SEO path="/about" />
       {/* Bio */}
-      <section className="section-sm" style={{ paddingTop: 72, paddingBottom: 80 }}>
+      <section className="section-sm" style={{ paddingTop: 72 }}>
         <div className="wrap">
           <div className="eyebrow eyebrow-lg">About</div>
           <div className="bio-grid" style={{ marginTop: 28 }}>
@@ -38,6 +39,7 @@ export default function About() {
           </div>
         </div>
       </section>
+      <CTABand />
     </div>
   )
 }
