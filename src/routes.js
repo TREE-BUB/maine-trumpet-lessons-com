@@ -4,7 +4,11 @@
 
 export const SITE_URL = 'https://mainetrumpetlessons.com'
 export const SITE_NAME = 'Maine Trumpet Lessons'
-export const OG_IMAGE = `${SITE_URL}/jimi-trumpet.jpg`
+// Dedicated 1.91:1 crop. The source photo is square, which social cards
+// centre-crop — that framing cuts the head off.
+export const OG_IMAGE = `${SITE_URL}/og-image.jpg`
+export const OG_IMAGE_WIDTH = '1200'
+export const OG_IMAGE_HEIGHT = '630'
 
 export const ROUTES = [
   {

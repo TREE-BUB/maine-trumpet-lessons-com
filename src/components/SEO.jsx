@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async'
-import { SITE_NAME, OG_IMAGE, absoluteUrl, routeFor } from '../routes'
+import { SITE_NAME, OG_IMAGE, OG_IMAGE_WIDTH, OG_IMAGE_HEIGHT, absoluteUrl, routeFor } from '../routes'
 
 /**
  * Per-route <head>. Title and description come from the shared route manifest
@@ -28,6 +28,8 @@ export default function SEO({ path, title, description, jsonLd, noindex = false 
       <meta property="og:title" content={finalTitle} />
       <meta property="og:description" content={finalDescription} />
       <meta property="og:image" content={OG_IMAGE} />
+      <meta property="og:image:width" content={OG_IMAGE_WIDTH} />
+      <meta property="og:image:height" content={OG_IMAGE_HEIGHT} />
       <meta property="og:image:alt" content="Jimi Michel playing the trumpet" />
 
       {/* Twitter Card */}

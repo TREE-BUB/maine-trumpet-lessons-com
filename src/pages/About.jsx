@@ -6,13 +6,6 @@ const INSTRUMENTS = [
   { n: 'Piccolo Trumpet', d: 'For Baroque and high-register showpieces.' },
 ]
 
-const LINKS = [
-  { label: 'YouTube', sub: 'Lesson clips & performances', href: '#' },
-  { label: 'Instagram', sub: '@mainetrumpet', href: '#' },
-  { label: 'SoundCloud', sub: 'Recordings & demos', href: '#' },
-  { label: 'Portland Brass Collective', sub: 'Ensemble I play with', href: '#' },
-]
-
 function InstrumentIcon() {
   return (
     <div
@@ -77,7 +70,7 @@ export default function About() {
       </section>
 
       {/* Instruments */}
-      <section className="section-sm">
+      <section className="section-sm" style={{ paddingBottom: 80 }}>
         <div className="wrap">
           <div className="eyebrow">Instruments</div>
           <h2 style={{ fontSize: 'clamp(1.7rem, 3vw, 2.6rem)', marginTop: 18 }}>What I play &amp; teach</h2>
@@ -90,40 +83,6 @@ export default function About() {
                   <p style={{ color: 'var(--muted)', marginTop: 7, lineHeight: 1.55, fontSize: '0.92rem' }}>{it.d}</p>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Links */}
-      <section className="section-sm" style={{ paddingBottom: 80 }}>
-        <div className="wrap">
-          <div className="eyebrow">Links</div>
-          <h2 style={{ fontSize: 'clamp(1.7rem, 3vw, 2.6rem)', marginTop: 18 }}>Listen &amp; follow along</h2>
-          <div style={{ marginTop: 30, borderTop: '1px solid var(--line)' }}>
-            {LINKS.map((l) => (
-              <a
-                key={l.label}
-                href={l.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'space-between',
-                  padding: '22px 4px',
-                  borderBottom: '1px solid var(--line)',
-                  transition: 'padding 0.2s',
-                }}
-                onMouseEnter={(e) => (e.currentTarget.style.paddingLeft = '16px')}
-                onMouseLeave={(e) => (e.currentTarget.style.paddingLeft = '4px')}
-              >
-                <div style={{ display: 'flex', alignItems: 'baseline', gap: 18, flexWrap: 'wrap' }}>
-                  <span style={{ fontSize: 'clamp(1.2rem, 2.4vw, 1.7rem)', fontWeight: 600, letterSpacing: '-0.01em' }}>{l.label}</span>
-                  <span style={{ fontFamily: 'var(--mono)', fontSize: '0.78rem', color: 'var(--muted)', letterSpacing: '0.04em' }}>{l.sub}</span>
-                </div>
-                <span style={{ color: 'var(--accent-deep)', fontSize: '1.4rem' }}>↗</span>
-              </a>
             ))}
           </div>
         </div>

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import CTABand from '../components/CTABand'
 import SEO from '../components/SEO'
-import { SITE_URL, OG_IMAGE } from '../routes'
+import { SITE_URL } from '../routes'
 
 const JSON_LD = {
   '@context': 'https://schema.org',
@@ -13,7 +13,7 @@ const JSON_LD = {
       description:
         'Private, in-person trumpet lessons for beginners, comeback players, and advanced students of all ages in Deering Center, Portland, Maine.',
       url: `${SITE_URL}/`,
-      image: OG_IMAGE,
+      image: `${SITE_URL}/jimi-trumpet.jpg`,
       email: 'hello@mainetrumpetlessons.com',
       priceRange: '$$',
       address: {
@@ -54,7 +54,7 @@ const JSON_LD = {
       name: 'Jimi Michel',
       jobTitle: 'Trumpet Instructor',
       url: `${SITE_URL}/about`,
-      image: OG_IMAGE,
+      image: `${SITE_URL}/jimi-trumpet.jpg`,
       email: 'hello@mainetrumpetlessons.com',
       worksFor: { '@id': `${SITE_URL}/#business` },
       alumniOf: [
